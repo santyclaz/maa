@@ -1,0 +1,78 @@
+.font-roboto {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.font-lato {
+	font-family: 'Lato', sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+.splash {
+	height: 750px;
+}
+
+/**
+ * image scaling
+ * naming convention: http://getbem.com/naming
+ */
+
+.img-scaling {
+	position: relative;
+	overflow: hidden;
+}
+
+/**
+ * image scaling, fill-height utilities
+ */
+
+.img-scaling > .img-scaling__img--fill-height {
+	height: 100%;
+	width: auto;
+}
+
+.img-scaling
+	> .img-scaling__img--fill-height.img-scaling__img--horizontal-center {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.img-scaling > .img-scaling__img--fill-height.img-scaling__img--left {
+	position: relative;
+	left: 0;
+}
+
+.img-scaling > .img-scaling__img--fill-height.img-scaling__img--right {
+	position: absolute;
+	right: 0;
+}
+
+.img-scaling > .img-scaling__img--fill-width {
+	height: auto;
+	width: 100%;
+}
+
+.img-scaling > .img-scaling__img--fill-width.img-scaling__img--vertical-center {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.img-scaling > .img-scaling__img--fill-width.img-scaling__img--top {
+	position: relative;
+	top: 0;
+}
+
+.img-scaling > .img-scaling__img--fill-width.img-scaling__img--bottom {
+	/* "position: absolute" to align relative to container */
+	position: absolute;
+	bottom: 0;
+	/* "left: 0" is to counter-act any text-alignment that may be set */
+	left: 0;
+}
