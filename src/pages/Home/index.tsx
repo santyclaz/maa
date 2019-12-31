@@ -9,7 +9,7 @@ const Home: React.FC<RouteComponentProps> = () => {
 			<img
 				src={splashImg}
 				alt="splash"
-				className="img-scaling__img--fill-height img-scaling__img--horizontal-center"
+				className="img-scaling__img--horizontal-center img-scaling__img--vertical-center"
 			/>
 		</section>
 	);
