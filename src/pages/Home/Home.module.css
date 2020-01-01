@@ -10,6 +10,7 @@ section.content > * {
 }
 
 ol.countdown {
+	font-weight: bold;
 	justify-content: center;
 }
 ol.countdown li {

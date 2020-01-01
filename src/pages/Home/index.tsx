@@ -16,9 +16,7 @@ const Home: React.FC<RouteComponentProps> = () => {
 				/>
 			</section>
 			<section className={styles.content}>
-				<p className={styles.message}>
-					Please join us for our wedding celebration in:
-				</p>
+				<p>Please join us for our wedding celebration in:</p>
 				<h2>County Clare, Ireland</h2>
 				<ol className={`${styles.countdown} inline`}>
 					<li>300 days</li>
