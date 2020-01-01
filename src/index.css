@@ -10,89 +10,94 @@ body {
 }
 
 .splash {
-	height: 750px;
+	/*height: 750px;*/
+	height: 500px;
 }
 
 /**
- * image scaling
+ * image container
  * naming convention: http://getbem.com/naming
  */
 
-.img-scaling {
+.img-container {
 	position: relative;
 	overflow: hidden;
 }
 
-.img-scaling > .img-scaling__img {
+.img-container > .img-container__img {
 	height: auto;
 	width: auto;
 }
 
 /**
- * image scaling, centering utilities
+ * image scaling modes
  */
 
-.img-scaling > .img-scaling__img--horizontal-center {
-	position: relative;
+.img-container > .img-container__img--fill-height {
+	height: 100%;
+	width: auto;
+}
+
+.img-container > .img-container__img--fill-width {
+	height: auto;
+	width: 100%;
+}
+
+/**
+ * image vertical + horizontal alignment
+ * note: `right` needs to come after `top/bottom` so it can override `left: 0`
+ */
+
+.img-container > .img-container__img--top {
+	position: absolute;
+	top: 0;
+	bottom: auto;
+	/* `left: 0` is to counter-act any `text-align: right` set on parent container */
+	left: 0;
+}
+
+.img-container > .img-container__img--bottom {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	/* `left: 0` is to counter-act any `text-align: right` set on parent container */
+	left: 0;
+}
+
+.img-container > .img-container__img--left {
+	position: absolute;
+	left: 0;
+	right: auto;
+}
+
+.img-container > .img-container__img--right {
+	position: absolute;
+	left: auto;
+	right: 0;
+}
+
+.img-container > .img-container__img--horizontal-center {
+	position: absolute;
 	left: 50%;
+	right: auto;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
 
-.img-scaling > .img-scaling__img--vertical-center {
-	position: relative;
+.img-container > .img-container__img--vertical-center {
+	position: absolute;
 	top: 50%;
+	bottom: auto;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
-.img-scaling
-	> .img-scaling__img--horizontal-center.img-scaling__img--vertical-center {
-	position: relative;
+.img-container
+	> .img-container__img--horizontal-center.img-container__img--vertical-center {
+	position: absolute;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
-}
-
-/**
- * image scaling, fill-height + utilities
- */
-
-.img-scaling > .img-scaling__img--fill-height {
-	height: 100%;
-	width: auto;
-}
-
-.img-scaling > .img-scaling__img--fill-height.img-scaling__img--left {
-	position: relative;
-	left: 0;
-}
-
-.img-scaling > .img-scaling__img--fill-height.img-scaling__img--right {
-	position: absolute;
-	right: 0;
-}
-
-/**
- * image scaling, fill-width + utilities
- */
-
-.img-scaling > .img-scaling__img--fill-width {
-	height: auto;
-	width: 100%;
-}
-
-.img-scaling > .img-scaling__img--fill-width.img-scaling__img--top {
-	position: relative;
-	top: 0;
-}
-
-.img-scaling > .img-scaling__img--fill-width.img-scaling__img--bottom {
-	/* "position: absolute" to align relative to container */
-	position: absolute;
-	bottom: 0;
-	/* "left: 0" is to counter-act any text-alignment that may be set */
-	left: 0;
 }
