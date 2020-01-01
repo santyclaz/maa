@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, Link } from '@reach/router';
 
 import './App.module.css';
+
 import Home from 'pages/Home';
 import Travel from 'pages/Travel';
 
@@ -19,13 +20,24 @@ const App: React.FC = () => {
 						<li>
 							<Link to="/">Home</Link>
 						</li>
-						<li>Schedule</li>
 						<li>
-							<Link to="travel">Travel</Link>
+							<Link to="/">The Wedding</Link>
 						</li>
-						<li>Lodging</li>
-						<li>RSVP</li>
-						<li>Registry</li>
+						<li>
+							<Link to="travel">Lodging</Link>
+						</li>
+						<li>
+							<Link to="/">Travel</Link>
+						</li>
+						<li>
+							<Link to="/">TO DO</Link>
+						</li>
+						<li>
+							<Link to="/">RSVP</Link>
+						</li>
+						<li>
+							<Link to="/">Registry</Link>
+						</li>
 					</ol>
 				</nav>
 			</header>
@@ -33,6 +45,7 @@ const App: React.FC = () => {
 				<Home path="/" />
 				<Travel path="travel" />
 			</Router>
+			<footer />
 		</div>
 	);
 };

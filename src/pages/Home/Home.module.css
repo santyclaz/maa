@@ -1,0 +1,17 @@
+section.content {
+	text-align: center;
+}
+
+section.content > :first-child {
+	margin-top: 35px;
+}
+section.content > * {
+	margin-bottom: 25px;
+}
+
+ol.countdown {
+	justify-content: center;
+}
+ol.countdown li {
+	margin: 0 5px;
+}
