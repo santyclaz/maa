@@ -1,11 +1,10 @@
 import React from 'react';
-import { RouteComponentProps } from '@reach/router';
 
 import styles from './Home.module.css';
 
 import splashImg from 'assets/main1.jpg';
 
-const Home: React.FC<RouteComponentProps> = () => {
+const Home: React.FC = () => {
 	return (
 		<div>
 			<section className="splash img-container">

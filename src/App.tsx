@@ -1,15 +1,28 @@
 import React from 'react';
-import { Router, Link } from '@reach/router';
+import { Router, Link, RouteComponentProps } from '@reach/router';
 
-import './App.module.css';
+import styles from './App.module.css';
 
 import Home from 'pages/Home';
 import Travel from 'pages/Travel';
 
 /**
- * If adding @reach/router `path` prop to component w/ Typescript use `RouteComponentProps` interface
+ * utility HoC to wrap given component with `className` & `RouteComponentProps`
+ *
+ * `RouteComponentProps` interface is for leveraging @reach/router `path` prop on component
  * https://github.com/reach/router/blob/master/website/src/markdown/pages/typescript.md
  * https://github.com/reach/router/issues/141#issuecomment-481472656
+ */
+type ViewProps = {
+	component: React.ReactElement;
+	className?: string;
+} & RouteComponentProps;
+const View: React.FC<ViewProps> = ({ component, className }) => {
+	return <div className={className}>{component}</div>;
+};
+
+/**
+ * component definition
  */
 const App: React.FC = () => {
 	return (
@@ -24,10 +37,10 @@ const App: React.FC = () => {
 							<Link to="/">The Wedding</Link>
 						</li>
 						<li>
-							<Link to="travel">Lodging</Link>
+							<Link to="/">Lodging</Link>
 						</li>
 						<li>
-							<Link to="/">Travel</Link>
+							<Link to="travel">Travel</Link>
 						</li>
 						<li>
 							<Link to="/">TO DO</Link>
@@ -42,8 +55,8 @@ const App: React.FC = () => {
 				</nav>
 			</header>
 			<Router className="viewport">
-				<Home path="/" />
-				<Travel path="travel" />
+				<View component={<Home />} path="/" />
+				<View component={<Travel />} path="travel" />
 			</Router>
 			<footer />
 		</div>

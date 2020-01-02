@@ -1,10 +1,8 @@
 import React from 'react';
-import { RouteComponentProps } from '@reach/router';
 
 import styles from './Travel.module.css';
 
-// `React.FC<RouteComponentProps>` to allow for @reach/router `path` property
-const Travel: React.FC<RouteComponentProps> = () => {
+const Travel: React.FC = () => {
 	return <div className={styles.red}>This is the travel page</div>;
 };
 
