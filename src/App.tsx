@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Link, RouteComponentProps } from '@reach/router';
 
-import styles from './App.module.css';
+import './App.module.css';
 
 import Home from 'pages/Home';
 import Travel from 'pages/Travel';
