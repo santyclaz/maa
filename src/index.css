@@ -46,14 +46,14 @@ body {
 ol,
 ul {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 ol.inline,
 ul.inline {
 	display: flex;
 	list-style: none;
-	margin: 0;
-	padding: 0;
 }
 
 .splash {
