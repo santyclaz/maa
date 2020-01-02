@@ -7,6 +7,7 @@ import Home from 'pages/Home';
 import Wedding from 'pages/Wedding';
 import Lodging from 'pages/Lodging';
 import Travel from 'pages/Travel';
+import Registry from 'pages/Registry';
 
 /**
  * utility HoC to wrap given component with `className` & `RouteComponentProps`
@@ -36,10 +37,10 @@ const App: React.FC = () => {
 							<Link to="/">Home</Link>
 						</li>
 						<li>
-							<Link to="/wedding">The Wedding</Link>
+							<Link to="wedding">The Wedding</Link>
 						</li>
 						<li>
-							<Link to="/lodging">Lodging</Link>
+							<Link to="lodging">Lodging</Link>
 						</li>
 						<li>
 							<Link to="travel">Travel</Link>
@@ -51,7 +52,7 @@ const App: React.FC = () => {
 							<Link to="/">RSVP</Link>
 						</li>
 						<li>
-							<Link to="/">Registry</Link>
+							<Link to="registry">Registry</Link>
 						</li>
 					</ol>
 				</nav>
@@ -61,6 +62,7 @@ const App: React.FC = () => {
 				<View component={<Wedding />} path="wedding" />
 				<View component={<Lodging />} path="lodging" />
 				<View component={<Travel />} path="travel" />
+				<View component={<Registry />} path="registry" />
 			</Router>
 			<footer />
 		</div>
