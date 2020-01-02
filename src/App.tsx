@@ -4,6 +4,7 @@ import { Router, Link, RouteComponentProps } from '@reach/router';
 import './App.module.css';
 
 import Home from 'pages/Home';
+import Wedding from 'pages/Wedding';
 import Lodging from 'pages/Lodging';
 import Travel from 'pages/Travel';
 
@@ -35,7 +36,7 @@ const App: React.FC = () => {
 							<Link to="/">Home</Link>
 						</li>
 						<li>
-							<Link to="/">The Wedding</Link>
+							<Link to="/wedding">The Wedding</Link>
 						</li>
 						<li>
 							<Link to="/lodging">Lodging</Link>
@@ -57,6 +58,7 @@ const App: React.FC = () => {
 			</header>
 			<Router className="viewport">
 				<View component={<Home />} path="/" />
+				<View component={<Wedding />} path="wedding" />
 				<View component={<Lodging />} path="lodging" />
 				<View component={<Travel />} path="travel" />
 			</Router>

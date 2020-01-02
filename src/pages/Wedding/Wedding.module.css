@@ -1,0 +1,16 @@
+.content {
+	text-align: center;
+}
+
+dl {
+	display: inline-block;
+	text-align: left;
+}
+
+dl dt {
+	float: left;
+	width: 120px;
+}
+dl dd {
+	margin-left: 120px;
+}
