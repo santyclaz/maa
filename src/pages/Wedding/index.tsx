@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Wedding.module.css';
 
-import splashImg from 'assets/main1.jpg';
+import splashImg from 'assets/wedding-2000.jpg';
 
 const Wedding: React.FC = () => {
 	return (

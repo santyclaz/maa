@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Travel.module.css';
 
-import splashImg from 'assets/main2.jpg';
+import splashImg from 'assets/travel-2000.jpg';
 
 const Travel: React.FC = () => {
 	return (
@@ -25,7 +25,7 @@ const Travel: React.FC = () => {
 						flights might be more expensive..
 					</p>
 					<p>
-						<a href="#">Map Route</a>
+						<a href="#map">Map Route</a>
 					</p>
 				</section>
 
@@ -36,7 +36,7 @@ const Travel: React.FC = () => {
 						Travelers from Asia will most likely be flying into this airport.
 					</p>
 					<p>
-						<a href="#">Map Route</a>
+						<a href="#map">Map Route</a>
 					</p>
 				</section>
 			</section>
@@ -54,7 +54,11 @@ const Travel: React.FC = () => {
 
 				<p>
 					If you do not drive, please email us at{' '}
-					<a href="mailto:maryandalanwedding@gmail.com" target="_blank">
+					<a
+						href="mailto:maryandalanwedding@gmail.com"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						maryandalanwedding@gmail.com
 					</a>{' '}
 					so we can coordinate transportation.

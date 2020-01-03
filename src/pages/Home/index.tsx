@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Home.module.css';
 
-import splashImg from 'assets/main1.jpg';
+import splashImg from 'assets/homepage-2000.jpg';
 
 const Home: React.FC = () => {
 	return (

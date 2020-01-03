@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Lodging.module.css';
 
-import splashImg from 'assets/main2.jpg';
+import splashImg from 'assets/homepage-2000.jpg';
 
 const Lodging: React.FC = () => {
 	return (
@@ -40,7 +40,7 @@ const Lodging: React.FC = () => {
 						yourself if your rooms are just a flight of stairs away!
 					</p>
 					<p>
-						<a href="#">Visit Website</a>
+						<a href="#armada">Visit Website</a>
 					</p>
 				</section>
 
@@ -50,7 +50,11 @@ const Lodging: React.FC = () => {
 					<h2>How to Reserve Rooms:</h2>
 					<p>
 						Send an email to{' '}
-						<a href="mailto:reservations@armadahotel.com" target="_blank">
+						<a
+							href="mailto:reservations@armadahotel.com"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							reservations@armadahotel.com
 						</a>{' '}
 						with the following details:
@@ -79,17 +83,17 @@ const Lodging: React.FC = () => {
 					<p>Breaffy South, Spanish Point, Co. Clare, V95 E942, Ireland</p>
 
 					<p>
-						<a href="#">Visit Website</a>
+						<a href="#spanish-point">Visit Website</a>
 					</p>
 				</section>
 
 				<section>
-					<h2>Spanish Point House</h2>
+					<h2>Armada Cottages</h2>
 
 					<p>Armada Holiday Cottages, Co. Clare, Ireland</p>
 
 					<p>
-						<a href="#">Visit Website</a>
+						<a href="#cottages">Visit Website</a>
 					</p>
 				</section>
 			</section>
