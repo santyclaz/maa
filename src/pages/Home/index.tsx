@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Home.module.css';
 
-import splashImg from 'assets/homepage-2000.jpg';
+import splashImg from 'assets/homepage-2-1920.jpg';
 
 const Home: React.FC = () => {
 	return (
@@ -11,8 +11,12 @@ const Home: React.FC = () => {
 				<img
 					src={splashImg}
 					alt="splash"
-					className="img-container__img--vertical-center img-container__img--horizontal-center"
+					className="img-container__img--fill-height img-container__img--vertical-center img-container__img--horizontal-center"
 				/>
+				<div className={styles['hero-text']}>
+					<span className={styles['hero-text-left']}>Mary + Alan</span>
+					<span className={styles['hero-text-right']}>June 13, 2020</span>
+				</div>
 			</section>
 			<section className={styles.content}>
 				<p>Please join us for our wedding celebration in:</p>

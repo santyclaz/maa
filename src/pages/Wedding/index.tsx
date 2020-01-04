@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Wedding.module.css';
 
-import splashImg from 'assets/wedding-2000.jpg';
+import splashImg from 'assets/wedding-1920.jpg';
 
 const Wedding: React.FC = () => {
 	return (
@@ -11,7 +11,7 @@ const Wedding: React.FC = () => {
 				<img
 					src={splashImg}
 					alt="splash"
-					className="img-container__img--vertical-center img-container__img--horizontal-center"
+					className="img-container__img--fill-height img-container__img--vertical-center img-container__img--horizontal-center"
 				/>
 			</section>
 
