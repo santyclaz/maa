@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Link, RouteComponentProps } from '@reach/router';
 
-import './App.module.css';
+import styles from './App.module.css';
 
 import Home from 'pages/Home';
 import Wedding from 'pages/Wedding';
@@ -58,7 +58,7 @@ const App: React.FC = () => {
 					</ol>
 				</nav>
 			</header>
-			<Router className="viewport">
+			<Router className={styles.viewport}>
 				<View component={<Home />} path="/" />
 				<View component={<Wedding />} path="wedding" />
 				<View component={<Lodging />} path="lodging" />

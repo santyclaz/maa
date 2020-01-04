@@ -9,6 +9,11 @@ header {
   background-color: #fff;
 }
 
+.viewport {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 footer {
   height: 100px;
 }

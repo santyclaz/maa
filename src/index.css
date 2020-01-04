@@ -43,6 +43,10 @@ body {
 	margin: 0;
 }
 
+hr {
+	width: 80vw;
+}
+
 ol,
 ul {
 	list-style: none;
@@ -55,6 +59,10 @@ ul.inline {
 	display: flex;
 	list-style: none;
 }
+
+/**
+ * components
+ */
 
 .splash {
 	height: 80vh;
