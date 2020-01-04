@@ -61,6 +61,32 @@ ul.inline {
 }
 
 /**
+ * responsive utilities
+ */
+
+@media screen and (width < 650px) {
+	.visible-xs-block {
+		display: block;
+	}
+	.visible-xs-inline {
+		display: inline;
+	}
+	.visible-xs-inline-block {
+		display: inline-block;
+	}
+	.hidden-xs {
+		display: none;
+	}
+}
+@media screen and (min-width: 650px) {
+	.visible-xs-block,
+	.visible-xs-inline,
+	.visible-xs-inline-block {
+		display: none;
+	}
+}
+
+/**
  * components
  */
 

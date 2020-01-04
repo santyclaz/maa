@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './Home.module.css';
 
+import splashImgMobile from 'assets/homepage-2-1920.jpg';
 import splashImg from 'assets/homepage-3-1920.jpg';
 
 const Home: React.FC = () => {
@@ -9,9 +10,14 @@ const Home: React.FC = () => {
 		<div>
 			<section className="splash img-container">
 				<img
+					src={splashImgMobile}
+					alt="splash"
+					className="img-container__img--fill-height img-container__img--vertical-center img-container__img--horizontal-center visible-xs-inline"
+				/>
+				<img
 					src={splashImg}
 					alt="splash"
-					className="img-container__img--fill-height img-container__img--vertical-center img-container__img--horizontal-center"
+					className="img-container__img--fill-height img-container__img--vertical-center img-container__img--horizontal-center hidden-xs"
 				/>
 			</section>
 			<section className={styles.content}>
