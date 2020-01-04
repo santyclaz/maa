@@ -31,17 +31,16 @@ nav ol {
   font-size: 12px;
 }
 nav ol > li {
+  display: inline-block;
   margin: 0 15px;
-  padding: 5px 5px;
   text-transform: uppercase;
-}
-nav ol > li:hover {
-  cursor: pointer;
 }
 
 nav li a {
+  display: inline-block;
   text-decoration: none;
   color: black;
+  padding: 5px 5px;
 }
 nav li:hover a {
   text-decoration: underline;
