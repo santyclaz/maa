@@ -7,6 +7,7 @@ import Home from 'pages/Home';
 import Wedding from 'pages/Wedding';
 import Lodging from 'pages/Lodging';
 import Travel from 'pages/Travel';
+import Todo from 'pages/Todo';
 import Registry from 'pages/Registry';
 
 /**
@@ -46,7 +47,7 @@ const App: React.FC = () => {
 							<Link to="travel">Travel</Link>
 						</li>
 						<li>
-							<Link to="/">TO DO</Link>
+							<Link to="todo">TO DO</Link>
 						</li>
 						<li>
 							<Link to="/">RSVP</Link>
@@ -62,6 +63,7 @@ const App: React.FC = () => {
 				<View component={<Wedding />} path="wedding" />
 				<View component={<Lodging />} path="lodging" />
 				<View component={<Travel />} path="travel" />
+				<View component={<Todo />} path="todo" />
 				<View component={<Registry />} path="registry" />
 			</Router>
 			<footer />
