@@ -6,7 +6,7 @@ import splashImg from 'assets/travel-2000.jpg';
 
 const Travel: React.FC = () => {
 	return (
-		<div className={styles.content}>
+		<div>
 			<section className="splash img-container">
 				<img
 					src={splashImg}
