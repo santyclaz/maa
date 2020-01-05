@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Travel.module.css';
 
-import splashImg from 'assets/travel-2-1920.jpg';
+import splashImg from 'assets/travel-1920.jpg';
 
 const Travel: React.FC = () => {
 	return (
@@ -13,6 +13,7 @@ const Travel: React.FC = () => {
 					alt="splash"
 					className="img-container__img--fill-height img-container__img--vertical-center img-container__img--horizontal-center"
 				/>
+				<span className="splash__text">Travel</span>
 			</section>
 
 			<section className="main-content">

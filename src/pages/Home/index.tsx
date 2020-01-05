@@ -2,15 +2,15 @@ import React from 'react';
 
 import styles from './Home.module.css';
 
-import splashImgMobile from 'assets/homepage-2-1920.jpg';
-import splashImg from 'assets/homepage-5-1920.jpg';
+import splashImgXs from 'assets/homepage-2-1920.jpg';
+import splashImg from 'assets/homepage-1920.jpg';
 
 const Home: React.FC = () => {
 	return (
 		<div>
 			<section className="splash img-container">
 				<img
-					src={splashImgMobile}
+					src={splashImgXs}
 					alt="splash"
 					className="img-container__img--fill-height img-container__img--vertical-center img-container__img--horizontal-center visible-xs-inline"
 				/>

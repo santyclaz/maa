@@ -13,6 +13,7 @@ const Lodging: React.FC = () => {
 					alt="splash"
 					className="img-container__img--fill-height img-container__img--vertical-center img-container__img--horizontal-center"
 				/>
+				<span className="splash__text">Lodging</span>
 			</section>
 
 			<section className="main-content">
