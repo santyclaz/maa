@@ -31,9 +31,9 @@ const Lodging: React.FC = () => {
 					</p>
 					<p>Bed & Breakfast Rates:</p>
 					<ol>
-						<li>1 night - 205/night</li>
-						<li>2 nights - 195/night</li>
-						<li>3 nights - 185/night</li>
+						<li>1 night - €205/night</li>
+						<li>2 nights - €195/night</li>
+						<li>3 nights - €185/night</li>
 					</ol>
 					<p>
 						Our Irish wedding celebration can last till dawn! You will thank

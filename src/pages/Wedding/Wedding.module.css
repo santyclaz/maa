@@ -5,11 +5,11 @@
 dl {
 	display: inline-block;
 	text-align: left;
+	width: 240px;
 }
 
 dl dt {
 	float: left;
-	width: 120px;
 }
 dl dd {
 	margin-left: 120px;
