@@ -31,7 +31,7 @@ const Wedding: React.FC = () => {
 						<dt>2:30 pm</dt>
 						<dd>Cocktail Hour</dd>
 						<dt>5:00 pm</dt>
-						<dd>Recption</dd>
+						<dd>Reception</dd>
 						<dt>12:00 am</dt>
 						<dd>Afterparty</dd>
 					</dl>

@@ -44,7 +44,7 @@ const Travel: React.FC = () => {
 			<hr />
 
 			<section className={styles.content}>
-				<h1>By Plane</h1>
+				<h1>Car Rental</h1>
 
 				<p>
 					We highly recommend renting a car to drive through the countryside.
