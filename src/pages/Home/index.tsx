@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Home.module.css';
 
 import splashImgMobile from 'assets/homepage-2-1920.jpg';
-import splashImg from 'assets/homepage-3-1920.jpg';
+import splashImg from 'assets/homepage-5-1920.jpg';
 
 const Home: React.FC = () => {
 	return (

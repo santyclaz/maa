@@ -40,7 +40,13 @@ const Lodging: React.FC = () => {
 						yourself if your rooms are just a flight of stairs away!
 					</p>
 					<p>
-						<a href="#armada">Visit Website</a>
+						<a
+							href="https://www.armadahotel.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Visit Website
+						</a>
 					</p>
 				</section>
 
@@ -83,7 +89,13 @@ const Lodging: React.FC = () => {
 					<p>Breaffy South, Spanish Point, Co. Clare, V95 E942, Ireland</p>
 
 					<p>
-						<a href="#spanish-point">Visit Website</a>
+						<a
+							href="https://spanishpointhouse.ie/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Visit Website
+						</a>
 					</p>
 				</section>
 
@@ -93,7 +105,13 @@ const Lodging: React.FC = () => {
 					<p>Armada Holiday Cottages, Co. Clare, Ireland</p>
 
 					<p>
-						<a href="#cottages">Visit Website</a>
+						<a
+							href="https://www.armadacottages.ie/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Visit Website
+						</a>
 					</p>
 				</section>
 			</section>
