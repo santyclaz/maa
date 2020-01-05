@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Lodging.module.css';
 
-import splashImg from 'assets/homepage-2-1920.jpg';
+import splashImg from 'assets/lodging.jpg';
 
 const Lodging: React.FC = () => {
 	return (
