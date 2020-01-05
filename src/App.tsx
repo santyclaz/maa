@@ -32,7 +32,7 @@ const App: React.FC = () => {
 	return (
 		<div className="app font-lato">
 			<header>
-				<nav>
+				<nav className={styles.inline}>
 					<ol>
 						<li>
 							<Link to="/">Home</Link>

@@ -24,10 +24,10 @@ footer {
 
 nav {
   margin: 15px 0;
+  text-align: center;
 }
 
 nav ol {
-  display: flex;
   justify-content: center;
   list-style: none;
   margin: 0;
@@ -35,14 +35,30 @@ nav ol {
 
   font-size: 12px;
 }
-nav ol > li {
+nav ol li {
+  text-transform: uppercase;
+}
+nav ol li a {
+  display: block;
+}
+
+nav.inline {
+  text-align: start;
+}
+
+nav.inline ol {
+  display: flex;
+}
+nav.inline ol > li {
   display: inline-block;
   margin: 0 15px;
-  text-transform: uppercase;
+}
+
+nav.inline ol li a {
+  display: inline-block;
 }
 
 nav li a {
-  display: inline-block;
   text-decoration: none;
   color: black;
   padding: 5px 5px;
