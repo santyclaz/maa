@@ -13,7 +13,7 @@ const Todo: React.FC = () => {
 				/>
 			</section>
 
-			<section>Placeholder</section>
+			<section className="main-content">Placeholder</section>
 		</div>
 	);
 };

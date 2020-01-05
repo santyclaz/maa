@@ -20,7 +20,7 @@ const Home: React.FC = () => {
 					className="img-container__img--fill-height img-container__img--vertical-center img-container__img--horizontal-center hidden-xs"
 				/>
 			</section>
-			<section className={styles.content}>
+			<section className={`main-content ${styles.content}`}>
 				<p>Please join us for our wedding celebration in:</p>
 				<h2>County Clare, Ireland</h2>
 				<ol className={`${styles.countdown} inline`}>

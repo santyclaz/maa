@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Wedding.module.css';
+import './Wedding.module.css';
 
 import splashImg from 'assets/wedding-1920.jpg';
 
@@ -15,13 +15,13 @@ const Wedding: React.FC = () => {
 				/>
 			</section>
 
-			<section className={styles.content}>
+			<section className="main-content">
 				<h1>Ceremony & Reception</h1>
 				<h2>Armada hotel</h2>
 				<p>Spanish Point, Co. Clare, Ireland</p>
 			</section>
 
-			<section className={styles.content}>
+			<section className="main-content">
 				<h1>Event Schedule</h1>
 				<section>
 					<h2>Saturday - June 13, 2020</h2>

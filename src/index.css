@@ -106,3 +106,9 @@ ul.inline {
 	min-height: 500px;
 	max-height: 1000px;
 }
+
+.main-content {
+	max-width: 450px;
+	margin: 0 auto;
+	text-align: center;
+}

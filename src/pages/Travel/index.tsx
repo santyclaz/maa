@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Travel.module.css';
+import './Travel.module.css';
 
 import splashImg from 'assets/travel-2-1920.jpg';
 
@@ -15,14 +15,14 @@ const Travel: React.FC = () => {
 				/>
 			</section>
 
-			<section className={styles.content}>
+			<section className="main-content">
 				<h1>By Plane</h1>
 
 				<section>
 					<h2>Shannon Airport</h2>
 					<p>
 						Closest airport to the hotel venue, only an hour drive away. But
-						flights might be more expensive..
+						flights might be more expensive.
 					</p>
 					<p>
 						<a href="#map">Map Route</a>
@@ -43,7 +43,7 @@ const Travel: React.FC = () => {
 
 			<hr />
 
-			<section className={styles.content}>
+			<section className="main-content">
 				<h1>Car Rental</h1>
 
 				<p>

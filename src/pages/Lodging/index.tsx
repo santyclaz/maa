@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Lodging.module.css';
+import './Lodging.module.css';
 
 import splashImg from 'assets/homepage-2-1920.jpg';
 
@@ -15,7 +15,7 @@ const Lodging: React.FC = () => {
 				/>
 			</section>
 
-			<section className={styles.content}>
+			<section className="main-content">
 				<h1>Armada Hotel</h1>
 
 				<section>
@@ -80,7 +80,7 @@ const Lodging: React.FC = () => {
 
 			<hr />
 
-			<section className={styles.content}>
+			<section className="main-content">
 				<h1>Other Nearby Options</h1>
 
 				<section>
