@@ -28,7 +28,6 @@ nav {
 }
 
 nav ol {
-  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -42,22 +41,6 @@ nav ol li a {
   display: block;
 }
 
-nav.inline {
-  text-align: start;
-}
-
-nav.inline ol {
-  display: flex;
-}
-nav.inline ol > li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav.inline ol li a {
-  display: inline-block;
-}
-
 nav li a {
   text-decoration: none;
   color: black;
@@ -65,4 +48,20 @@ nav li a {
 }
 nav li:hover a {
   text-decoration: underline;
+}
+
+nav.inline {
+}
+
+nav.inline > ol {
+  display: flex;
+  /*text-align: center;*/
+}
+nav.inline > ol > li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav.inline > ol li a {
+  display: inline-block;
 }
