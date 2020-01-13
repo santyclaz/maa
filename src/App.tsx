@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Router, Link, RouteComponentProps } from '@reach/router';
 
 import styles from './App.module.css';
@@ -29,11 +29,22 @@ const View: React.FC<ViewProps> = ({ component, className }) => {
  * component definition
  */
 const App: React.FC = () => {
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<div className="app font-lato">
 			<header>
-				<nav className={styles.inline}>
-					<ol>
+				<nav className={styles['inline-md']}>
+					<div
+						className={`${styles['menu-button']} visible-xs-block`}
+						onClick={() => {
+							setIsOpen(!isOpen);
+						}}
+					>
+						Mary & Alan Wedding{' '}
+						<span className={`${styles.arrow} arrow-down`} />
+					</div>
+					<ol className={!isOpen ? 'hidden-xs' : ''}>
 						<li>
 							<Link to="/">Home</Link>
 						</li>

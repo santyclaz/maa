@@ -23,13 +23,25 @@ footer {
  */
 
 nav {
-  margin: 15px 0;
   text-align: center;
+}
+
+nav > * {
+  margin: 15px 0;
+}
+
+nav .menu-button {
+  position: relative;
+}
+nav .menu-button .arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 nav ol {
   list-style: none;
-  margin: 0;
   padding: 0;
 
   font-size: 12px;
@@ -50,18 +62,17 @@ nav li:hover a {
   text-decoration: underline;
 }
 
-nav.inline {
-}
-
-nav.inline > ol {
-  display: flex;
-  /*text-align: center;*/
-}
-nav.inline > ol > li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav.inline > ol li a {
-  display: inline-block;
+@value md-screen from "./variables.module.css";
+@media screen and md-screen {
+  nav.inline-md > ol {
+    text-align: center;
+    white-space: nowrap;
+  }
+  nav.inline-md > ol > li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  nav.inline-md > ol li a {
+    display: inline-block;
+  }
 }
