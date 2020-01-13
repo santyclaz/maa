@@ -14,7 +14,9 @@ const Todo: React.FC = () => {
 				<span className="splash__text">To Do</span>
 			</section>
 
-			<section className="main-content">Placeholder</section>
+			<section className="main-content">
+				<p>Placeholder</p>
+			</section>
 		</div>
 	);
 };

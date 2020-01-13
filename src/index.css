@@ -124,6 +124,10 @@ ul.inline {
 	text-align: center;
 }
 
+.main-content > :first-child {
+	margin-top: 20px;
+}
+
 .arrow-up {
 	display: inline-block;
 	width: 0;
