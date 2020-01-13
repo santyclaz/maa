@@ -27,15 +27,16 @@ nav {
 }
 
 nav > * {
-  margin: 15px 0;
+  margin: 20px 0;
 }
 
 nav .menu-button {
   position: relative;
+  font-size: 20px;
 }
 nav .menu-button .arrow {
   position: absolute;
-  right: 15px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -43,8 +44,7 @@ nav .menu-button .arrow {
 nav ol {
   list-style: none;
   padding: 0;
-
-  font-size: 12px;
+  font-size: 16px;
 }
 nav ol li {
   text-transform: uppercase;
@@ -56,7 +56,7 @@ nav ol li a {
 nav li a {
   text-decoration: none;
   color: black;
-  padding: 5px 5px;
+  padding: 10px 5px;
 }
 nav li:hover a {
   text-decoration: underline;
@@ -67,6 +67,7 @@ nav li:hover a {
   nav.inline-md > ol {
     text-align: center;
     white-space: nowrap;
+    font-size: 12px;
   }
   nav.inline-md > ol > li {
     display: inline-block;
@@ -74,5 +75,6 @@ nav li:hover a {
   }
   nav.inline-md > ol li a {
     display: inline-block;
+    padding: 5px 5px;
   }
 }
