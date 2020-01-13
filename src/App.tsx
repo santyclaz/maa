@@ -44,7 +44,12 @@ const App: React.FC = () => {
 						Mary & Alan Wedding{' '}
 						<span className={`${styles.arrow} arrow-down`} />
 					</div>
-					<ol className={!isOpen ? 'hidden-xs' : ''}>
+					<ol
+						className={!isOpen ? 'hidden-xs' : ''}
+						onClick={() => {
+							setIsOpen(!isOpen);
+						}}
+					>
 						<li>
 							<Link to="/">Home</Link>
 						</li>
