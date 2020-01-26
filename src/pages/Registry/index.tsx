@@ -3,6 +3,7 @@ import React from 'react';
 import './Registry.module.css';
 
 import splashImg from 'assets/registry-1920.jpg';
+import zolaLogo from 'assets/zola-logo.png';
 
 const Home: React.FC = () => {
 	return (
@@ -25,7 +26,9 @@ const Home: React.FC = () => {
 
 				<h2>You Can Make Your Gift At:</h2>
 
-				<p>ZOLA</p>
+				<p>
+					<img src={zolaLogo} style={{ width: '190px' }} />
+				</p>
 			</section>
 		</div>
 	);
