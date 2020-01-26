@@ -27,7 +27,7 @@ const Home: React.FC = () => {
 				<h2>You Can Make Your Gift At:</h2>
 
 				<p>
-					<img src={zolaLogo} style={{ width: '190px' }} />
+					<img src={zolaLogo} alt="zola-logo" style={{ width: '190px' }} />
 				</p>
 			</section>
 		</div>
