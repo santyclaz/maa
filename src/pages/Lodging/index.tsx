@@ -51,7 +51,7 @@ const Lodging: React.FC = () => {
 					</p>
 				</section>
 
-				<p>* * *</p>
+				<p style={{margin: '20px auto 15px'}}>* * *</p>
 
 				<section>
 					<h2>How to Reserve Rooms:</h2>

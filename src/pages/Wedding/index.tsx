@@ -37,14 +37,6 @@ const Wedding: React.FC = () => {
 					</dl>
 					<p>Attire: Cocktail</p>
 				</section>
-				<section>
-					<h2>Sunday - June 14, 2020</h2>
-					<dl>
-						<dt>10 am - 12 pm</dt>
-						<dd>Farewell Brunch</dd>
-					</dl>
-					<p>Attire: Casual</p>
-				</section>
 			</section>
 		</div>
 	);

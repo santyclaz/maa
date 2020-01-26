@@ -23,10 +23,10 @@ const Travel: React.FC = () => {
 					<h2>Shannon Airport</h2>
 					<p>
 						Closest airport to the hotel venue, only an hour drive away. But
-						flights might be more expensive.
+						flights might be more expensive. There are also limited direct flights to this airport.
 					</p>
 					<p>
-						<a href="#map">Map Route</a>
+						<a href="https://www.google.com/maps/dir/Shannon+Airport,+County+Clare,+Ireland/Armada+Hotel,+Breaffy+South,+County+Clare,+Ireland/@52.799845,-9.2961765,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x485b41dad0f8b40b:0x6bf3c305b024f8dc!2m2!1d-8.9146911!2d52.6996573!1m5!1m1!1s0x485b02d413389b5d:0xab5eb23e1dd63517!2m2!1d-9.4365209!2d52.8451737!3e0" target="_blank" rel="noopener noreferrer">Map Route</a>
 					</p>
 				</section>
 
@@ -37,7 +37,7 @@ const Travel: React.FC = () => {
 						Travelers from Asia will most likely be flying into this airport.
 					</p>
 					<p>
-						<a href="#map">Map Route</a>
+						<a href="https://www.google.com/maps/dir/Dublin+Airport+%28DUB%29,+Dublin,+Ireland/Armada+Hotel,+Breaffy+South,+County+Clare,+Ireland/@53.040609,-8.9543614,8z/data=!4m15!4m14!1m5!1m1!1s0x486711be6993192f:0x55121bb5b725f355!2m2!1d-6.2499098!2d53.4264481!1m5!1m1!1s0x485b02d413389b5d:0xab5eb23e1dd63517!2m2!1d-9.4365209!2d52.8451737!3e0!5i1" target="_blank" rel="noopener noreferrer">Map Route</a>
 					</p>
 				</section>
 			</section>
