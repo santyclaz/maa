@@ -9,7 +9,7 @@ import splashImgXs from 'assets/homepage-2-1920.jpg';
 import splashImg from 'assets/homepage-1920.jpg';
 
 const Home: React.FC = () => {
-	const [timeLeft, setTimeLeft] = useState({
+	const [timeLeft, setTimeLeft] = useState<TimeLeft>({
 		days: 0,
 		hours: 0,
 		minutes: 0,

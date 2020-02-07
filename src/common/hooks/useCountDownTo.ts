@@ -1,5 +1,3 @@
-import { useRef, useEffect } from 'react';
-
 import useInterval from 'common/hooks/useInterval';
 
 /**

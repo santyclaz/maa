@@ -35,7 +35,7 @@ function useInterval(
 			callbackRef.current();
 		}
 
-		const id = window.setInterval(callbackRef.current, delayMs);
+		const id = window.setInterval(tick, delayMs);
 		return () => window.clearInterval(id);
 	}, [delayMs]);
 }
