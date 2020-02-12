@@ -6,25 +6,40 @@
 import { useRef, useEffect } from 'react';
 
 /**
+ * API
+ */
+
+export { useInterval as default };
+
+/**
  * implementation
  */
 
 const NOOP = () => {};
 
+/**
+ * @arg {function} callback - callback to invoke at given interval
+ * @arg {number} delayMs - minimum delay between invocations
+ * @arg {boolean} leadingCall - whether to start with immediate invocation of callback or not
+ */
 function useInterval(
 	callback: () => void,
 	delayMs: number,
-	leadingCall: boolean = false // whether to immediately call the callback to start
+	leadingCall: boolean = false
 ) {
+	const initialLeadingCallVal = useRef<boolean>(leadingCall); // save initial value
 	const callbackRef = useRef<() => void>(NOOP);
 
 	useEffect(() => {
 		callbackRef.current = callback;
 	});
 
-	// on mount/unmount only
+	// on mount only
 	useEffect(() => {
-		if (leadingCall) {
+		// using reference version so we don't need to include it in the dependency list
+		// i.e. if referencing `leadingCall`, linter rule `react-hooks/exhaustive-deps`
+		//   will complain
+		if (initialLeadingCallVal) {
 			callbackRef.current();
 		}
 	}, []);
@@ -39,5 +54,3 @@ function useInterval(
 		return () => window.clearInterval(id);
 	}, [delayMs]);
 }
-
-export default useInterval;
