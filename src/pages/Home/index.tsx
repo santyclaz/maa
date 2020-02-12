@@ -3,19 +3,19 @@ import React, { useState } from 'react';
 import styles from './Home.module.css';
 
 import useCountDownTo from 'common/hooks/useCountDownTo';
-import { TimeLeft } from 'common/hooks/useCountDownTo'; // type import
 
 import splashImgXs from 'assets/homepage-2-1920.jpg';
 import splashImg from 'assets/homepage-1920.jpg';
 
 const Home: React.FC = () => {
-	const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+	const [timeLeft, setTimeLeft] = useState({
 		days: 0,
 		hours: 0,
 		minutes: 0,
 		seconds: 0,
 	});
-	useCountDownTo('2020-06-13', timeleft => {
+	// Ireland is GMT
+	useCountDownTo('2020-06-13T00:00:00Z', timeleft => {
 		setTimeLeft(timeleft);
 	});
 
