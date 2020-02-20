@@ -15,7 +15,7 @@ const Todo: React.FC = () => {
 			</section>
 
 			<section className="main-content">
-				<p>Placeholder</p>
+				<h1>Coming Soon</h1>
 			</section>
 		</div>
 	);
