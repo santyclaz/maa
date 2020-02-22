@@ -6,7 +6,7 @@ if (typeof RSVP_API_URL !== 'string') {
 }
 
 const config = {
-	RSVP_API_URL: typeof RSVP_API_URL === 'string' ? RSVP_API_URL : '',
+	RSVP_API_URL,
 };
 
 export default config;
