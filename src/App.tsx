@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Router, Link, RouteComponentProps } from '@reach/router';
 
 import styles from './App.module.css';
+import './common/rmwc.styles';
 
 import Home from 'pages/Home';
 import Wedding from 'pages/Wedding';

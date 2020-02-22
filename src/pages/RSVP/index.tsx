@@ -1,41 +1,30 @@
 import React, { useState } from 'react';
 
 import { Grid, GridCell } from '@rmwc/grid';
-import '@material/layout-grid/dist/mdc.layout-grid.css';
 import { TextField } from '@rmwc/textfield';
-import '@material/textfield/dist/mdc.textfield.css';
-import '@material/floating-label/dist/mdc.floating-label.css';
-import '@material/notched-outline/dist/mdc.notched-outline.css';
-import '@material/line-ripple/dist/mdc.line-ripple.css';
 import { Radio } from '@rmwc/radio';
-import '@material/radio/dist/mdc.radio.css';
-import '@material/form-field/dist/mdc.form-field.css';
 import { Select } from '@rmwc/select';
-import '@material/select/dist/mdc.select.css';
-import '@material/floating-label/dist/mdc.floating-label.css';
-import '@material/notched-outline/dist/mdc.notched-outline.css';
-import '@material/line-ripple/dist/mdc.line-ripple.css';
-import '@material/list/dist/mdc.list.css';
-import '@material/menu/dist/mdc.menu.css';
-import '@material/menu-surface/dist/mdc.menu-surface.css';
 import { Button } from '@rmwc/button';
-import '@material/button/dist/mdc.button.css';
+
+import config from 'config';
+import splashImg from 'assets/todo-1920.jpg';
 
 import styles from './RSVP.module.css';
-
-import splashImg from 'assets/todo-1920.jpg';
 
 /**
  * constants
  */
 
+const RSVP_URL = config.RSVP_API_URL;
+
+// guest count options
 const MAX_GUESTS = 5;
 const guestCountOptions: { value: string; label: string }[] = [];
 
 for (let i = 0; i <= MAX_GUESTS; i++) {
 	guestCountOptions.push({
 		value: i.toString(),
-		label: i === 0 ? 'Just myself' : i === 1 ? '1 guest' : `${i} guests`,
+		label: i === 0 ? 'Just me' : i === 1 ? '1 guest' : `${i} guests`,
 	});
 }
 
@@ -44,9 +33,11 @@ for (let i = 0; i <= MAX_GUESTS; i++) {
  */
 
 const RSVP: React.FC = () => {
+	const [hasClickedSubmit, setHasClickedSubmit] = useState(false);
 	const [name, setName] = useState('');
 	const [attending, setAttending] = useState<undefined | boolean>(undefined);
 	const [guestCount, setGuestCount] = useState(0);
+	const [guests, setGuests] = useState<string[]>([]);
 	const [message, setMessage] = useState('');
 
 	return (
@@ -69,6 +60,7 @@ const RSVP: React.FC = () => {
 								className={`${styles.fullWidth} ${styles.backgroundOpacity}`}
 								placeholder="Full Name"
 								outlined
+								invalid={hasClickedSubmit && !isNameValid()}
 								value={name}
 								onChange={e => setName(e.currentTarget.value)}
 							/>
@@ -126,7 +118,17 @@ const RSVP: React.FC = () => {
 								unelevated
 								value={message}
 								onClick={e => {
-									console.log(name, attending, guestCount, message);
+									setHasClickedSubmit(true);
+
+									if (isFormValid()) {
+										submit({
+											name,
+											attending: attending === true,
+											guests,
+											message,
+										});
+									}
+
 									e.preventDefault();
 								}}
 							/>
@@ -136,6 +138,32 @@ const RSVP: React.FC = () => {
 			</section>
 		</div>
 	);
+
+	function isFormValid() {
+		return [isNameValid, isAttendingValid].every(fn => fn());
+	}
+	function isNameValid() {
+		return name.trim() !== '';
+	}
+	function isAttendingValid() {
+		return typeof attending === 'boolean';
+	}
+
+	async function submit(payload: {
+		name: string;
+		attending: boolean;
+		guests: string[];
+		message: string;
+	}) {
+		const result = await fetch(RSVP_URL, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(payload),
+		});
+		return result;
+	}
 };
 
 export default RSVP;
