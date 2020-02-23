@@ -33,12 +33,20 @@ for (let i = 0; i <= MAX_GUESTS; i++) {
  */
 
 const RSVP: React.FC = () => {
+	/**
+	 * state
+	 */
+
 	const [hasClickedSubmit, setHasClickedSubmit] = useState(false);
 	const [name, setName] = useState('');
 	const [attending, setAttending] = useState<undefined | boolean>(undefined);
 	const [guestCount, setGuestCount] = useState(0);
 	const [guests, setGuests] = useState<string[]>([]);
 	const [message, setMessage] = useState('');
+
+	/**
+	 * component definition
+	 */
 
 	return (
 		<div className={styles.container}>
@@ -96,6 +104,12 @@ const RSVP: React.FC = () => {
 							/>
 						</GridCell>
 
+						{renderGuestListTextFields().map((textField, i) => (
+							<GridCell key={i} span={12}>
+								{textField}
+							</GridCell>
+						))}
+
 						<GridCell span={12}>
 							<TextField
 								name="comment"
@@ -139,6 +153,10 @@ const RSVP: React.FC = () => {
 		</div>
 	);
 
+	/**
+	 * method definitions
+	 */
+
 	function isFormValid() {
 		return [isNameValid, isAttendingValid].every(fn => fn());
 	}
@@ -147,6 +165,27 @@ const RSVP: React.FC = () => {
 	}
 	function isAttendingValid() {
 		return typeof attending === 'boolean';
+	}
+
+	function renderGuestListTextFields() {
+		let guestList = [];
+		for (let i = 0; i < guestCount; i++) {
+			guestList.push(
+				<TextField
+					key={i}
+					className={`${styles.fullWidth} ${styles.backgroundOpacity}`}
+					placeholder={`Guest #${i + 1} Full Name`}
+					outlined
+					value={guests[i] || ''} // doing this since given index may be undefined
+					onChange={e => {
+						const updatedGuests = [...guests];
+						updatedGuests[i] = e.currentTarget.value;
+						setGuests(updatedGuests);
+					}}
+				/>
+			);
+		}
+		return guestList;
 	}
 
 	async function submit(payload: {
