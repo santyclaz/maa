@@ -36,6 +36,11 @@ h2 {
 	text-transform: uppercase;
 	margin: 15px 0 5px;
 }
+h3 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px 0 0;
+}
 
 /**
  * general
